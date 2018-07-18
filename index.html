@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Exercice 3 Partie 1</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <canvas id="myCanvas" width="500" height="500">
+    </canvas>
+    <script>
+    var c = document.getElementById('myCanvas');
+    var ctx = c.getContext('2d');
+    /*Toit de la voiture*/
+    ctx.fillStyle = 'green';
+    ctx.fillRect(70,100,290,75);
+    /*Corps de la voiture*/
+    ctx.fillStyle = 'green';
+    ctx.fillRect(25,175,400,75);
+    /*Roue arrière*/
+    ctx.beginPath();
+    ctx.fillStyle = 'grey';
+    ctx.strokeStyle = 'black';
+    ctx.arc(60,300,50,15,0,Math.PI*2,false);
+    ctx.stroke();
+    ctx.fill();
+    /*Roue avant*/
+    ctx.beginPath();
+    ctx.fillStyle = 'grey';
+    ctx.strokeStyle = 'black';
+    ctx.arc(400,300,50,15,0,Math.PI*2,false);
+    ctx.stroke();
+    ctx.fill();
+    </script>
+  </body>
+</html>
